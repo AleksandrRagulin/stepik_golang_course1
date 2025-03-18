@@ -1,0 +1,3 @@
+GOGC=off go test -bench="." -memprofile="mem.prof"
+go tool pprof mem.prof
+go tool pprof -http=localhost:8080 mem.prof
